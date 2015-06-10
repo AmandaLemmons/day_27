@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <h1> LET'S SEE SOME OF YOUR PICTURES! </h1>
+    <h5> Upload a picture </h5>
+    <%= link_to "UPLOAD", new_post_path, class: "btn btn-primary btn-lg"%>
+  </div>
+
+  <h6> <%= pluralize @posts.total_count, "Picture" %> </h6>
+
+    <% @posts.each do |post| %>
+    <div class="row">
+
+      <%= image_tag post.photo.url(:large) do %>
+      <%= link_to 'Delete', delete_post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure!?!?!'}%>
+    </div>
+      <% end %>
+      <p> Posted <%= distance_of_time_in_words_to_now post.created_at %> ago </p>
+
+
+    <% end %>
+
+
+
+
+
+
+  <%= paginate @posts %>
+</div>
