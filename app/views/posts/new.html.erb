@@ -1,10 +1,9 @@
 
 <div class="container">
   <%= simple_form_for @post do |f| %>
-    <%= f.input :title, as: :text %>
+    <%= f.input :title %>
     <%= f.input :photo %>
-    <%= f.submit class: "btn btn-primary" %>
-
-  <%end %>
-
+    <%= f.input :tag_list, placehoder: "Tags: separate by commas" %>
+    <%= f.submit 'Upload', class: 'btn btn-primary' %>
+    <%end%>
 </div>

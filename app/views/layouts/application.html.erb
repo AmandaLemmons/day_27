@@ -7,10 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="alert alert-success" role="alert">
-    <%= notice %>
-  </div>
+<nav>
+  <% if @current_user.present? %>
+    <h4> Hello <%= @current_user.username %>
+    <%= link_to "Sign Out?", sign_out_path, method: :delete %>
+  </h4>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-success" role="alert"> <%= alert %> </div>
+    <% end %>
+</nav>
+
+
+
 <%= yield %>
 
 </body>
+
 </html>

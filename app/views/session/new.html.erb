@@ -1,0 +1,22 @@
+<div class="container">
+  <h1> Time to Sign In </h1>
+    <%= form_tag auth_path, method: :post do %>
+      <div>
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+      <br>
+      </div>
+
+      <div>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, "", class: "form-control" %>
+      <br>
+      </div>
+
+      <div>
+        <%= submit_tag "Sign In", class: "btn btn-primary btn-lg"%>
+      </div>
+
+    <% end %>
+
+</div>

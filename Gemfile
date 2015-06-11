@@ -4,12 +4,14 @@ gem 'simple_form', '3.1'
 gem 'bootstrap-sass'
 gem 'kaminari'
 gem 'carrierwave'
+gem 'carrierwave-aws'
+gem 'dotenv-rails'
 gem 'rails_autolink'
 gem 'mini_magick'
 gem 'rails_admin'
-gem 'dotenv-rails'
-gem 'carrierwave-aws'
 gem 'rails_12factor'
+gem 'acts-as-taggable-on', '~> 3.4'
+gem "acts_as_follower"
 ruby '2.2.2'
 
 
@@ -36,7 +38,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

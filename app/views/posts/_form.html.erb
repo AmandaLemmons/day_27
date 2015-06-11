@@ -1,0 +1,15 @@
+
+<div>
+<% @posts.each do |post| %>
+  <div class="col-md-6">
+    <div>
+      <br>
+        <%= image_tag post.photo.url(:large) %>
+        <p> Posted <%= distance_of_time_in_words_to_now post.created_at %> ago </p>
+    </div>
+    <% post.tag_list.each do |tag| %>
+      <h4>Tags: <%= link_to tag, tag_path(tag: tag) %> </h4>
+      <%= link_to 'Delete', delete_post_path(id: post.id), class: "btn btn-primary btn-sm", method: 'delete', data: {confirm: 'Are you sure!?!?!'}%>
+    <% end %>
+  </div>
+<% end %>

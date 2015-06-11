@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
+
+
   root 'posts#index'
-
   get '/admin' => 'posts#new', as: :new_post
-
   post 'posts' => 'posts#create', as: :posts
-
+  get 'sign_in' => 'session#new', as: :sign_in
+  get 'tags/tags' => 'tags#show', as: :tag
+  delete 'sign_out' => 'session#delete', as: :sign_out
+  post 'auth' => 'session#create', as: :auth
   delete 'posts/:id' => 'posts#delete', as: :delete_post
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
