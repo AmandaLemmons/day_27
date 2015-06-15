@@ -7,13 +7,6 @@
   </div>
 
   <h4> <%= pluralize @posts.total_count, "Picture" %> </h4>
-
- <%= render partial: "posts/form" %>
-
-
-
-
-
-
-  <%= paginate @posts %>
+    <%= render partial: "posts/form" %>
+    <%= paginate @posts %>
 </div>

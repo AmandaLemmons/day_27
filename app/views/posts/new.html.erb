@@ -3,7 +3,7 @@
   <%= simple_form_for @post do |f| %>
     <%= f.input :title %>
     <%= f.input :photo %>
-    <%= f.input :tag_list, placehoder: "Tags: separate by commas" %>
+    <%= f.input :tag_list, label: "Tags", hint: "Tags should be separated by commas" %>
     <%= f.submit 'Upload', class: 'btn btn-primary' %>
     <%end%>
 </div>

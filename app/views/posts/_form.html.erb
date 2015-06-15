@@ -1,15 +1,13 @@
 
-<div>
+<div class="form">
 <% @posts.each do |post| %>
   <div class="col-md-6">
     <div>
       <br>
-        <%= image_tag post.photo.url(:large) %>
+        <%= image_tag post.photo.url(:large), class: "media-object img-rounded" %>
         <p> Posted <%= distance_of_time_in_words_to_now post.created_at %> ago </p>
     </div>
-    <% post.tag_list.each do |tag| %>
-      <h4>Tags: <%= link_to tag, tag_path(tag: tag) %> </h4>
+    <h4 class="tag">#<%= post.tag_list.map{|tag| link_to tag, tag_path(tag: tag)}.join("  #").html_safe %> </h4>
       <%= link_to 'Delete', delete_post_path(id: post.id), class: "btn btn-primary btn-sm", method: 'delete', data: {confirm: 'Are you sure!?!?!'}%>
-    <% end %>
   </div>
 <% end %>

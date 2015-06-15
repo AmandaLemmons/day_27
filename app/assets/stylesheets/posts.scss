@@ -1,3 +1,48 @@
-.row {
-  float: left;
+body {
+  background-color: #ECF0F1;
+  color: #34495E;
+  h4{
+    padding-left: 10%;
+  }
+
+}
+.navbar {
+    margin: 0 auto;
+    background-color: lighten(#F1C40F, 20%);
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  a {
+    margin-left: 4em;
+    color: #34495E;
+    font-size: 1.3em;
+  }
+  a:hover {
+    color: white;
+  }
+}
+
+.form {
+  color: #34495E;
+  h4{
+    padding: auto;
+  }
+}
+
+.tag h4 a{
+  color: #F1C40F,
+}
+
+.btn {
+  background-color: lighten(#F1C40F, 20%);
+  color: #34495E;
+  .btn:hover {
+    color: white;
+  }
+}
+.jumbotron {
+  background-color: lighten(#34495E, 50%);
+  color: #34495E;
+  }
+.media-object{
+  border: solid, 2px, red;
 }
