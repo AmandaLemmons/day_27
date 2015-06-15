@@ -11,8 +11,10 @@
 
   <nav class="navbar">
     <div class="nav">
-      <%= link_to "Home", root_path%>
+      <% if @current_user.present?%>
+        <%= link_to "Home", root_path%>
         <%= link_to "Sign Out", sign_out_path, method: :delete %>
+        <%end %>
 
     </div>
   </nav>

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
 
   root 'posts#index'
+  get '/users/:id' => 'users#show', as: :user
+  get 'sign_up'=> 'users#new', as: :signup
+  post '/users' => 'users#create', as: :users
   get '/admin' => 'posts#new', as: :new_post
   post 'posts' => 'posts#create', as: :posts
   get 'sign_in' => 'session#new', as: :sign_in
