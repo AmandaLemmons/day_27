@@ -5,7 +5,6 @@ class PostsController < ApplicationController
                   .order("created_at desc")
                   .page(params[:page])
 
-    @current_user = User.find_by id: session[:user_id]
     if @current_user.nil?
       redirect_to sign_in_path
     end

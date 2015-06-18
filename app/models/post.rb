@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
 
   validates :title,
   presence: true
-  acts_as_taggable 
+  acts_as_taggable
+
+  belongs_to :user
 
 end
